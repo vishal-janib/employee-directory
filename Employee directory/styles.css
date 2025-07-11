@@ -1,0 +1,29 @@
+.heading-container{
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.main-heading{
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.footerCont{
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.footerText{
+    color: white;
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.form_emp{
+    display:none;
+}

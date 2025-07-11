@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Employee directory\styles.css">
+</head>
+<body>
+    <div>
+        <div>
+            <form id="formElement" class="form_emp">
+                <h1>Add Employee</h1>
+                <label for="firstNameEl">First Name</label>
+                <input id="firstNameEl" type="text" />
+                <label for="lastNameEl">Last Name</label>
+                <input id="lastNameEl" type="text" />
+                <div>
+                    <label for="emailText">Email</label>
+                    <input id="emailText" type="email" />
+                    <label for="departmentEl">Department</label>
+                    <select id="departmentEl">
+                        <option selected value=""></option>
+                        <option value="HR">HR</option>
+                        <option value="IT">IT</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Tech">Tech</option>
+                    </select>
+                </div>
+                <label for="roleEmp">Role</label>
+                <select id="roleEmp">
+                    <option selected value=""></option>
+                    <option value="Manager">Manager</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Associate">Associate</option>
+                    <option value="Analyst">Analyst</option>
+                </select>
+                <div>
+                    <button type="button">Cancel</button>
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+        <div id="homeContainer">
+        <div class="heading-container">
+            <h1 class="main-heading">Employee Directory</h1>
+            <input id="searchInputNameEmail" type="search" placeholder="Search by name or email" />
+        </div>
+        <div>
+            <label for="filterSort">sort</label>
+            <select id=""filterSort>
+                <option selected>--Select--</option>
+                <option value="firstName">First Name</option>
+                <option value="department">Department</option>
+            </select>
+            <div>
+                <button id="addEmployeeBtn">Add Employee</button>
+            </div>
+        </div>
+        <ul id="employeeDetails">
+
+        </ul>
+    <div class="footerCont">
+        <p class="footerText"><span>c</span> 2025 Employee Directory App. All rights reserved</p>
+    </div>
+</div>
+    </div>
+    <script src="Employee directory\app.js"></script>
+</body>
+</html>
