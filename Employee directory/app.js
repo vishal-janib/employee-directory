@@ -5,6 +5,8 @@ let addEmployeeBtn=document.getElementById("addEmployeeBtn")
 let formElement=document.getElementById("formElement")
 let homeContainer=document.getElementById("homeContainer")
 let cancelElBtn=document.getElementById("cancelElBtn")
+let filterSort=document.getElementById("filterSort")
+let searchInputNameEmail=document.getElementById("searchInputNameEmail")
 
 let firstNameEl=document.getElementById("firstNameEl")
 let lastNameEl=document.getElementById("lastNameEl")
@@ -90,7 +92,28 @@ cancelElBtn.onclick=function(){
     roleEmp.value=""
 }
 
+filterSort.onchange=function(){
+    if(filterSort.value==="firstName"){
+        console.log(employeeDetails.textContent)
+        employeeDetails.textContent=""
+        let sortedList=employeeList.sort((a,b)=>
+        a.firstName.localeCompare(b.firstName))
+        for(let sortedEl of sortedList){
+            createAppendEmployee(sortedEl)
+        }
+    }
+    }
+
+searchInputNameEmail.addEventListener("input", function(event){
+    let searchItem=event.target.value.toLowerCase()
+    let newSearchArray=employeeList.filter(el=>el.firstName.toLowerCase().includes(searchItem)
+    )
+    employeeDetails.textContent=""
+    for(let x of newSearchArray){
+        createAppendEmployee(employee) 
+    }
+})
 
 for (let employee of employeeList){
-    createAppendEmployee(employee) 
+        createAppendEmployee(employee) 
 }
