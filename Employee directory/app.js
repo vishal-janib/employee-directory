@@ -102,6 +102,15 @@ filterSort.onchange=function(){
             createAppendEmployee(sortedEl)
         }
     }
+    if(filterSort.value==="department"){
+        employeeDetails.textContent=""
+        let sortedDep=employeeList.sort((a,b)=>
+            a.department.localeCompare(b.department)
+        )
+        for(let dep of sortedDep){
+            createAppendEmployee(dep)
+        }
+    }
     }
 
 searchInputNameEmail.addEventListener("input", function(event){

@@ -8,6 +8,7 @@ A simple and interactive web-based Employee Directory application built using HT
 - Display employee cards dynamically
 - Delete employee records
 - Sort and search functionality placeholders (UI prepared)
+   *list is modified based on the searched results and filters*
 - Responsive and clean UI
 
 ## 📸 Screenshots
