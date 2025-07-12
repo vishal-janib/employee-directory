@@ -1,22 +1,27 @@
-let employeeList=[
-    { id: 1, firstName: 'John', lastName: 'Doe', email: 'john.doe@example.com', department: 'HR', role: 'Manager' },
-    { id: 2, firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', department: 'IT', role: 'Developer' }
-]
+let employeeList=[]
 
 let employeeDetails=document.getElementById("employeeDetails")
 let addEmployeeBtn=document.getElementById("addEmployeeBtn")
 let formElement=document.getElementById("formElement")
 let homeContainer=document.getElementById("homeContainer")
+let cancelElBtn=document.getElementById("cancelElBtn")
+
+let firstNameEl=document.getElementById("firstNameEl")
+let lastNameEl=document.getElementById("lastNameEl")
+let departmentEl=document.getElementById("departmentEl")
+let emailText=document.getElementById("emailText")
+let roleEmp=document.getElementById("roleEmp")
+
 
 addEmployeeBtn.onclick=function(){
     formElement.style.display="block"
     homeContainer.style.display="none"
 }
 
-
 function createAppendEmployee(employee){
     let employeeListCont=document.createElement("li")
     employeeDetails.appendChild(employeeListCont)
+    employeeListCont.classList.add("emp_card")
 
     let empName=document.createElement("p")
     employeeListCont.appendChild(empName)
@@ -37,21 +42,20 @@ function createAppendEmployee(employee){
     let btnEditDelete=document.createElement("div")
     employeeListCont.appendChild(btnEditDelete)
 
-    let editBTn=document.createElement("btn")
+    let editBTn=document.createElement("button")
     btnEditDelete.appendChild(editBTn)
     editBTn.textContent="Edit"
+    editBTn.classList.add("edit_btn_el")
 
-    let deleteBTn=document.createElement("btn")
+    let deleteBTn=document.createElement("button")
     btnEditDelete.appendChild(deleteBTn)
     deleteBTn.textContent="Delete"
+    deleteBTn.onclick=function(){
+        employeeDetails.removeChild(employeeListCont)
+    }
 }
 
 formElement.addEventListener("submit", function(){
-    let firstNameEl=document.getElementById("firstNameEl")
-    let lastNameEl=document.getElementById("lastNameEl")
-    let departmentEl=document.getElementById("departmentEl")
-    let emailText=document.getElementById("emailText")
-    let roleEmp=document.getElementById("roleEmp")
     
     let IdEmployee=employeeList.length+1
 
@@ -65,11 +69,28 @@ formElement.addEventListener("submit", function(){
     }
     employeeList.push(newEmployee)
     createAppendEmployee(newEmployee)
+    firstNameEl.value=""
+    lastNameEl.value=""
+    departmentEl.value=""
+    emailText.value=""
+    roleEmp.value=""
     formElement.style.display="none"
     homeContainer.style.display="block"
+    
     event.preventDefault()
 })
 
+cancelElBtn.onclick=function(){
+    formElement.style.display="none"
+    homeContainer.style.display="block"
+    firstNameEl.value=""
+    lastNameEl.value=""
+    departmentEl.value=""
+    emailText.value=""
+    roleEmp.value=""
+}
+
+
 for (let employee of employeeList){
-    createAppendEmployee(employee)
+    createAppendEmployee(employee) 
 }

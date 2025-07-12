@@ -3,6 +3,9 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .main-heading{
@@ -26,4 +29,81 @@
 
 .form_emp{
     display:none;
+    background-color: white;
+    padding:15px;
+    max-width: 350px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px grey;
+    box-sizing: border-box;
+}
+
+.c_sym{
+    border:2px solid white;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.textForm{
+    width:90%;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.email_dep{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.dep_cont{
+    margin-left: 5px;
+}
+
+.depart{
+    width:110px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 35px;
+}
+
+.add_btn{
+    background-color: blueviolet;
+    color: white;
+    margin-left: 3px;
+}
+
+.list_emp_ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    background-color: gray;
+}
+
+.emp_card{
+    background-color: white;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.filter_addBtn{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.add_emp_btn{
+    background-color: brown;
+}
+
+.edit_btn_el{
+    margin-right: 10px;
 }
