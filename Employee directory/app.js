@@ -119,7 +119,7 @@ searchInputNameEmail.addEventListener("input", function(event){
     )
     employeeDetails.textContent=""
     for(let x of newSearchArray){
-        createAppendEmployee(employee) 
+        createAppendEmployee(x) 
     }
 })
 
